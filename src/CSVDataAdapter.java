@@ -5,14 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CSVDataAdapter implements ExternalDataAdapter {
-    String filePath; // file path of csv data
-    BufferedReader reader = null; // buffered reader to read in csv data
-    String line = ""; // used to store lines of specifications as they are read in
+    private String filePath; // file path of csv data
+    private BufferedReader reader = null; // buffered reader to read in csv data
+    private String line = ""; // used to store lines of specifications as they are read in
 
     // ideally, it would probably be better if this was an array list of array list of strings. but
     // i have spent too long on reading this csv data, and this is what has worked. so i will leave it as
     // this.
-    List<String[]> data;
+    private List<String[]> data;
 
     /**
      * Constructor to initialize the CSVDataAdapter with the file path of where it will
